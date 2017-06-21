@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Gradle : JianLiao : JianLiao-1.0-SNAPSHOT.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/libs/exploded/JianLiao-1.0-SNAPSHOT.war</output-path>
+    <properties id="gradle-properties">
+      <options external-project-path="$PROJECT_DIR$" />
+    </properties>
+    <root id="root">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="G:/Github/JianLiao/Web/build/libs/exploded/JianLiao-1.0-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="JianLiao_main/web/Web Gradle : JianLiao-1.0-SNAPSHOT.war" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JianLiao_main" />
+          <element id="dir-copy" path="G:/Github/JianLiao/Web/build/resources/main" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
