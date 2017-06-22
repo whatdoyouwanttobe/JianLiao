@@ -1,13 +1,24 @@
 package com.zoulf.jianliao;
 
+import android.widget.EditText;
 import android.widget.TextView;
 import butterknife.BindView;
+import butterknife.OnClick;
 import com.zoulf.common.app.MyActivity;
 
-public class MainActivity extends MyActivity {
+/**
+ * @author Zoulf.
+ */
 
-  @BindView(R.id.tv_test)
-  TextView mTestText;
+public class MainActivity extends MyActivity implements IView {
+
+  @BindView(R.id.txt_result)
+  TextView mResultText;
+
+  @BindView(R.id.edit_query)
+  EditText mInputText;
+
+  private IPresenter mPresenter;
 
   @Override
   protected int getContentLayoutId() {
@@ -15,8 +26,23 @@ public class MainActivity extends MyActivity {
   }
 
   @Override
-  protected void initWidget() {
-    super.initWidget();
-    mTestText.setText("Test Hello!");
+  protected void initData() {
+    super.initData();
+    mPresenter = new Presenter(this);
+  }
+
+  @OnClick(R.id.btn_submit)
+  void onSubmit() {
+    mPresenter.search();
+  }
+
+  @Override
+  public String getInputString() {
+    return mInputText.getText().toString();
+  }
+
+  @Override
+  public void setResultString(String string) {
+    mResultText.setText(string);
   }
 }
