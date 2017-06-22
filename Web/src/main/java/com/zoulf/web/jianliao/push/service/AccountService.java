@@ -1,6 +1,6 @@
 package com.zoulf.web.jianliao.push.service;
 
-import com.zoulf.web.jianliao.push.bean.User;
+import com.zoulf.web.jianliao.push.bean.db.User;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
