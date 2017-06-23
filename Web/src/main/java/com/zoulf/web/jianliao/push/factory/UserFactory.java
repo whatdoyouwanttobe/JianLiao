@@ -6,7 +6,6 @@ import com.zoulf.web.jianliao.push.utils.Hib;
 import com.zoulf.web.jianliao.push.utils.TextUtil;
 import java.util.List;
 import java.util.UUID;
-import org.hibernate.Session;
 
 
 /**
@@ -203,34 +202,6 @@ public class UserFactory {
     password = TextUtil.getMD5(password);
     // 再进行一次对称的Base64加密，当然可以采取加盐的方案
     return TextUtil.encodeBase64(password);
-  }
-
-  /**
-   * 用户注册操作，需要写入数据库并返回数据库中的User信息
-   *
-   * @return User
-   */
-  public static User registerNew(String account, String passward, String name) {
-    User user = new User();
-    user.setName(name);
-    user.setPassword(passward);
-    // 账号就是手机号
-    user.setPhone(account);
-
-    // 数据库操作
-    Session session = Hib.session();
-    session.beginTransaction();
-    try {
-      // 保存操作
-      session.save(user);
-      session.getTransaction().commit();
-      return user;
-    } catch (Exception e) {
-      // 失败情况下回滚事务
-      session.getTransaction().rollback();
-      return null;
-    }
-
   }
 
 }
