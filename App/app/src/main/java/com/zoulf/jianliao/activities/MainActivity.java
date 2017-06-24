@@ -1,6 +1,7 @@
-package com.zoulf.jianliao;
+package com.zoulf.jianliao.activities;
 
 import com.zoulf.common.app.MyActivity;
+import com.zoulf.jianliao.R;
 
 public class MainActivity extends MyActivity {
 
