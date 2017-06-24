@@ -5,7 +5,6 @@ import com.zoulf.web.jianliao.push.bean.api.account.AccountRspModel;
 import com.zoulf.web.jianliao.push.bean.api.account.LoginModel;
 import com.zoulf.web.jianliao.push.bean.api.account.RegisterModel;
 import com.zoulf.web.jianliao.push.bean.api.base.ResponseModel;
-import com.zoulf.web.jianliao.push.bean.card.UserCard;
 import com.zoulf.web.jianliao.push.bean.db.User;
 import com.zoulf.web.jianliao.push.factory.UserFactory;
 import javax.ws.rs.Consumes;
@@ -20,7 +19,7 @@ import javax.ws.rs.core.MediaType;
  * @author Zoulf
  */
 @Path("/account")
-public class AccountService {
+public class AccountService extends BaseService{
 
   // 登录
   @POST

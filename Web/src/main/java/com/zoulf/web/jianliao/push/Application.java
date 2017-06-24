@@ -1,6 +1,6 @@
 package com.zoulf.web.jianliao.push;
 
-import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
+import com.zoulf.web.jianliao.push.provider.AuthRequestFilter;
 import com.zoulf.web.jianliao.push.provider.GsonProvider;
 import com.zoulf.web.jianliao.push.service.AccountService;
 import java.util.logging.Logger;
@@ -15,6 +15,8 @@ public class Application extends ResourceConfig {
     // 注册逻辑处理的包名
     packages(AccountService.class.getPackage().getName());
 
+    // 注册我们的全局请求拦截器
+    register(AuthRequestFilter.class);
     // 注册Json解析器
     // register(JacksonJsonProvider.class);
     // 替换为Gson解析器
