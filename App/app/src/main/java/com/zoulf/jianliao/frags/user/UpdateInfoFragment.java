@@ -1,6 +1,10 @@
 package net.qiujuer.italker.push.frags.user;
 
 
+import static android.app.Activity.RESULT_OK;
+import static java.security.AccessController.getContext;
+
+import android.app.Application;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
@@ -8,27 +12,13 @@ import android.net.Uri;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-
-import com.bumptech.glide.Glide;
-import com.yalantis.ucrop.UCrop;
-
-import net.qiujuer.genius.ui.widget.Loading;
-import net.qiujuer.italker.common.app.Application;
-import net.qiujuer.italker.common.app.PresenterFragment;
-import net.qiujuer.italker.common.widget.PortraitView;
-import net.qiujuer.italker.factory.presenter.user.UpdateInfoContract;
-import net.qiujuer.italker.factory.presenter.user.UpdateInfoPresenter;
-import net.qiujuer.italker.push.R;
-import net.qiujuer.italker.push.activities.MainActivity;
-import net.qiujuer.italker.push.frags.media.GalleryFragment;
-
-import java.io.File;
-
 import butterknife.BindView;
 import butterknife.OnClick;
-
-import static android.app.Activity.RESULT_OK;
-import static java.security.AccessController.getContext;
+import com.bumptech.glide.Glide;
+import com.yalantis.ucrop.UCrop;
+import com.zoulf.jianliao.activities.MainActivity;
+import java.io.File;
+import net.qiujuer.genius.ui.widget.Loading;
 
 /**
  * 用户更新信息的节目
