@@ -84,7 +84,7 @@ public class NavHelper<T> {
       if (oldTab == tab) {
         // 如果说当前的Tab就是点击的Tab，
         // 那么我们不做处理
-        notifyReselect(tab);
+        notifyTabReselect(tab);
         return;
       }
     }
