@@ -40,6 +40,15 @@ dependencies {
     compile "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterKnifeVersion"
 
+    // 运行时权限简化
+    compile("com.github.hotchemi:permissionsdispatcher:$rootProject.ext.permissionsdispatcherVersion") {
+        // if you don't use android.app.Fragment you can exclude support for them
+        exclude module: "support-v13"
+    }
+    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:$rootProject.ext.permissionsdispatcherVersion"
+
+    compile "com.yalantis:ucrop:$rootProject.ext.ucropVersion"
+
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
     compile 'com.android.support:support-v4:25.3.1'
     testCompile 'junit:junit:4.12'

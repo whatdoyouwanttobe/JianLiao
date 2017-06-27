@@ -4,12 +4,10 @@
   android:layout_height="match_parent"
   tools:context="com.zoulf.jianliao.frags.main.ActiveFragment">
 
-  <!-- TODO: Update blank fragment layout -->
-  <TextView
+  <com.zoulf.common.widget.GalleyView
+    android:id="@+id/galleryView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textColor="@color/colorPrimary"
-    android:gravity="center"
-    android:text="@string/hello_blank_fragment"/>
+    android:padding="1dp"/>
 
 </FrameLayout>

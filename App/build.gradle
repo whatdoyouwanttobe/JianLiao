@@ -36,4 +36,6 @@ ext {
     geniusVersion = '2.0.0'
     glideVersion = '3.7.0'
     circleimageviewVersion = '2.1.0'
+    permissionsdispatcherVersion = '2.4.0'
+    ucropVersion = "2.2.0-native"
 }

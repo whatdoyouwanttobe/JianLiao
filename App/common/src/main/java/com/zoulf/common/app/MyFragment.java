@@ -3,6 +3,7 @@ package com.zoulf.common.app;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,7 @@ import butterknife.Unbinder;
  * @author Zoulf
  */
 
-public abstract class MyFragment extends android.support.v4.app.Fragment {
+public abstract class MyFragment extends Fragment {
 
   protected View mRoot;
   protected Unbinder mRootUnBinder;
