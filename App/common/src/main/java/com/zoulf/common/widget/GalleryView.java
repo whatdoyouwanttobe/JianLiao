@@ -296,9 +296,9 @@ public class GalleryView extends RecyclerView {
     public ViewHolder(View itemView) {
       super(itemView);
 
-      mPic = (ImageView) findViewById(R.id.im_image);
+      mPic = (ImageView) itemView.findViewById(R.id.im_image);
       mShade = itemView.findViewById(R.id.view_shade);
-      mSelected = (CheckBox) findViewById(R.id.cb_select);
+      mSelected = (CheckBox) itemView.findViewById(R.id.cb_select);
     }
 
     @Override
