@@ -31,7 +31,7 @@ public class UploaderHelper {
   private static OSS getClient() {
     // 明文设置secret的方式建议只在测试时使用，更多鉴权模式请参考后面的`访问控制`章节
     OSSCredentialProvider credentialProvider = new OSSPlainTextAKSKCredentialProvider(
-        "LTAIyViaTjJr5Ycv", "G0O6NtfyXHyLBdeOv5E32DpWi4J6er");
+        "LTAIVyRI82HpCa4U", "1wGZjQ0tRv22F1ND8SMAX7ri2lCtUe");
     return new OSSClient(Factory.app(), ENDPOINT, credentialProvider);
   }
 
