@@ -35,12 +35,8 @@ dependencies {
     compile "de.hdodenhof:circleimageview:$rootProject.ext.circleimageviewVersion"
     compile "com.github.bumptech.glide:glide:$rootProject.ext.glideVersion"
     compile "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
+    compile "net.qiujuer.genius:kit-handler:$rootProject.ext.geniusVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterKnifeVersion"
-    // 运行时权限简化
-    compile("com.github.hotchemi:permissionsdispatcher:$rootProject.ext.permissionsdispatcherVersion") {
-        // if you don't use android.app.Fragment you can exclude support for them
-        exclude module: "support-v13"
-    }
     annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:$rootProject.ext.permissionsdispatcherVersion"
     testCompile 'junit:junit:4.12'
     compile project(':lang')

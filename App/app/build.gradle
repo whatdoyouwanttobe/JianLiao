@@ -25,7 +25,8 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-    compile project(':common')
+//    compile project(':common') factory已经引用了common包
+    compile project(':factory')
 
     compile "com.android.support:appcompat-v7:$rootProject.ext.supportVersion"
     compile "com.android.support:design:$rootProject.ext.supportVersion"
@@ -40,12 +41,9 @@ dependencies {
     compile "com.jakewharton:butterknife:$rootProject.ext.butterKnifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$rootProject.ext.butterKnifeVersion"
 
-    // 运行时权限简化
-    compile("com.github.hotchemi:permissionsdispatcher:$rootProject.ext.permissionsdispatcherVersion") {
-        // if you don't use android.app.Fragment you can exclude support for them
-        exclude module: "support-v13"
-    }
     annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:$rootProject.ext.permissionsdispatcherVersion"
+
+    compile "pub.devrel:easypermissions:$rootProject.ext.easyPMVersion"
 
     compile "com.yalantis:ucrop:$rootProject.ext.ucropVersion"
 

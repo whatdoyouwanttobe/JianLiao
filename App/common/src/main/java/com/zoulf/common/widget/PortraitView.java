@@ -1,4 +1,4 @@
-package com.zoulf.common.widget.a;
+package com.zoulf.common.widget;
 
 import android.content.Context;
 import android.util.AttributeSet;
