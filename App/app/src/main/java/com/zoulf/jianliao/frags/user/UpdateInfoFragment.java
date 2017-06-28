@@ -1,4 +1,4 @@
-package com.zoulf.jianliao.frags.account;
+package com.zoulf.jianliao.frags.user;
 
 
 import static android.app.Activity.RESULT_OK;
