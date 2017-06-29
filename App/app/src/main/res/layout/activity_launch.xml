@@ -21,6 +21,7 @@
       android:layout_marginBottom="8dp"
       android:layout_marginLeft="8dp"
       android:layout_marginRight="8dp"
+      android:scaleType="centerInside"
       android:layout_gravity="center_horizontal|bottom"
       android:contentDescription="@string/app_name"
       android:src="@drawable/ic_launch_logo"
