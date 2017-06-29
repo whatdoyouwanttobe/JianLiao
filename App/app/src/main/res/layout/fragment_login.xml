@@ -145,6 +145,7 @@
   <FrameLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/len_16"
     android:layout_marginBottom="@dimen/len_28">
 
     <net.qiujuer.genius.ui.widget.Button
