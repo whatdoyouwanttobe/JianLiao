@@ -14,7 +14,7 @@ import com.zoulf.factory.persistence.Account;
 import com.zoulf.jianliao.activities.AccountActivity;
 import com.zoulf.jianliao.activities.MainActivity;
 import com.zoulf.jianliao.frags.assist.PermissionFragment;
-import net.qiujuer.genius.res.Resource.Color;
+import net.qiujuer.genius.res.Resource;
 import net.qiujuer.genius.ui.compat.UiCompat;
 
 public class LaunchActivity extends MyActivity {
@@ -57,6 +57,7 @@ public class LaunchActivity extends MyActivity {
    * 等待个推框架对我们的PushId设置好值
    */
   private void waitPushReceiverId() {
+
     if (Account.isLogin()) {
       // 已经登录的情况下，判断是否已经绑定
       // 如果没有绑定则等待广播接收器进行绑定
@@ -114,14 +115,13 @@ public class LaunchActivity extends MyActivity {
   }
 
   private void startAnim(float endProgress, final Runnable endCallback) {
-    // 设置最终颜色为白色
-    int finalColor = Color.WHITE;
+    // 获取一个最终的颜色
+    int finalColor = Resource.Color.WHITE; // UiCompat.getColor(getResources(), R.color.white);
     // 运算当前进度的颜色
-    ArgbEvaluator argbEvaluator = new ArgbEvaluator();
-    int endColor = (int) argbEvaluator.evaluate(endProgress, mBgDrawable, finalColor);
-    // 颜色变化->属性变化->属性动画，构建一个属性动画
-    ValueAnimator valueAnimator = ObjectAnimator
-        .ofObject(this, property, argbEvaluator, endCallback);
+    ArgbEvaluator evaluator = new ArgbEvaluator();
+    int endColor = (int) evaluator.evaluate(endProgress, mBgDrawable.getColor(), finalColor);
+    // 构建一个属性动画
+    ValueAnimator valueAnimator = ObjectAnimator.ofObject(this, property, evaluator, endColor);
     valueAnimator.setDuration(1500); // 时间
     valueAnimator.setIntValues(mBgDrawable.getColor(), endColor); // 开始结束值
     valueAnimator.addListener(new AnimatorListenerAdapter() {
@@ -132,6 +132,7 @@ public class LaunchActivity extends MyActivity {
         endCallback.run();
       }
     });
+    valueAnimator.start();
   }
 
   private final Property<LaunchActivity, Object> property = new Property<LaunchActivity, Object>(

@@ -18,7 +18,7 @@ import com.zoulf.factory.persistence.Account;
 
 public class MessageReceiver extends BroadcastReceiver {
 
-  private static final String TAG = "MessageReceiver";
+  private static final String TAG = MessageReceiver.class.getName();
 
   @Override
   public void onReceive(Context context, Intent intent) {
@@ -42,8 +42,8 @@ public class MessageReceiver extends BroadcastReceiver {
           String message = new String(payload);
           onMessageArrived(message);
           Log.i(TAG, "onReceive: GET_MES_DATA:" + message);
-          break;
         }
+        break;
       }
       default:
         Log.i(TAG, "onReceive: OTHER:" + bundle.toString());
