@@ -11,6 +11,7 @@ import android.util.Property;
 import android.view.View;
 import com.zoulf.common.app.MyActivity;
 import com.zoulf.factory.persistence.Account;
+import com.zoulf.jianliao.activities.AccountActivity;
 import com.zoulf.jianliao.activities.MainActivity;
 import com.zoulf.jianliao.frags.assist.PermissionFragment;
 import net.qiujuer.genius.res.Resource.Color;
@@ -56,13 +57,22 @@ public class LaunchActivity extends MyActivity {
    * 等待个推框架对我们的PushId设置好值
    */
   private void waitPushReceiverId() {
-    // 如果拿到
-    if (!TextUtils.isEmpty(Account.getPushId())) {
-      // 跳转
-      skip();
-      return;
+    if (Account.isLogin()) {
+      // 已经登录的情况下，判断是否已经绑定
+      // 如果没有绑定则等待广播接收器进行绑定
+      if (Account.isBind()) {
+        skip();
+        return;
+      }
+    } else {
+      // 没有登录
+      // 如果拿到了PushId，没有登录时不能绑定PushId
+      if (!TextUtils.isEmpty(Account.getPushId())) {
+        // 跳转
+        skip();
+        return;
+      }
     }
-
     // 循环等待
     getWindow().getDecorView().postDelayed(new Runnable() {
       @Override
@@ -92,8 +102,14 @@ public class LaunchActivity extends MyActivity {
   private void reallySkip() {
     // 权限检测
     if (PermissionFragment.haveAll(this, getSupportFragmentManager())) {
-      MainActivity.show(this);
-      finish();
+      // 检查跳转到主页还是登录
+      if (Account.isLogin()) {
+        MainActivity.show(this);
+        finish();
+      } else {
+        AccountActivity.show(this);
+      }
+
     }
   }
 

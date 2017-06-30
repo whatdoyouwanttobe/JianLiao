@@ -6,6 +6,7 @@ import com.google.gson.GsonBuilder;
 import com.zoulf.common.app.MyApplication;
 import com.zoulf.factory.data.DataSource;
 import com.zoulf.factory.model.api.RspModel;
+import com.zoulf.factory.persistence.Account;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -33,6 +34,14 @@ public class Factory {
         .setDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS") // 设置时间格式
         //.setExclusionStrategies() // TODO 设置一个过滤器，数据库级别的Model不进行Json转换
         .create();
+  }
+
+  /**
+   * Factory 中的初始化
+   */
+  public static void setup() {
+    //持久化的数据进行初始化
+    Account.load(app());
   }
 
   /**
@@ -137,5 +146,13 @@ public class Factory {
    */
   private static void logout() {
 
+  }
+
+  /**
+   * 处理推送来的消息
+   * @param message 消息
+   */
+  public static void dispatchPush(String message) {
+    // TODO
   }
 }
