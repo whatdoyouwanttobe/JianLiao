@@ -2,10 +2,13 @@ package com.zoulf.web.jianliao.push.factory;
 
 import com.google.common.base.Strings;
 import com.zoulf.web.jianliao.push.bean.db.User;
+import com.zoulf.web.jianliao.push.bean.db.UserFollow;
 import com.zoulf.web.jianliao.push.utils.Hib;
 import com.zoulf.web.jianliao.push.utils.TextUtil;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 
 /**
@@ -36,6 +39,11 @@ public class UserFactory {
         .createQuery("from User where name=:name")
         .setParameter("name", name)
         .uniqueResult());
+  }
+
+  // 通过Id找到User
+  public static User findById(String id) {
+    return Hib.query(session -> session.get(User.class, id));
   }
 
   /**
@@ -204,5 +212,82 @@ public class UserFactory {
     return TextUtil.encodeBase64(password);
   }
 
+  /**
+   * 获取我的联系人的列表
+   *
+   * @param self User
+   * @return List<User>
+   */
+  public static List<User> contacts(User self) {
+
+    return Hib.query(session -> {
+      // 重新加载一次用户信息到self中，和当前的session绑定
+      session.load(self, self.getId());
+
+      // 获取我关注的人
+      Set<UserFollow> flows = self.getFollowing();
+
+      // Java8的流式操作（骚皮操作）常规写法是遍历List返回flows
+      return flows
+          .stream()
+          .map(UserFollow::getTarget)
+          .collect(Collectors.toList());
+    });
+  }
+
+  /**
+   * 关注人的操作
+   *
+   * @param origin 发起者
+   * @param target 被关注得人
+   * @param alias 备注名
+   * @return 被关注的人
+   */
+  public static User follow(final User origin, final User target, final String alias) {
+    UserFollow follow = getUserFollow(origin, target);
+    if (follow != null) {
+      // 已关注，直接返回
+      return follow.getTarget();
+    }
+
+    return Hib.query(session -> {
+      // 想要重新操作懒加载的数据，需要重新load一次
+      session.load(origin, origin.getId());
+      session.load(target, target.getId());
+
+      // 我关注人的时候，同时他也关注我，所以需要添加两条UserFollow数据
+      UserFollow originFollow = new UserFollow();
+      originFollow.setOrigin(origin);
+      originFollow.setTarget(target);
+      // 备注是我对它的备注，他对我默认没有备注
+      originFollow.setAlias(alias);
+
+      UserFollow targetFollow = new UserFollow();
+      targetFollow.setOrigin(origin);
+      targetFollow.setTarget(target);
+
+      // 保存数据库
+      session.save(originFollow);
+      session.save(targetFollow);
+
+      return target;
+    });
+  }
+
+  /**
+   * 查询两个人是否已经关注
+   *
+   * @param origin 发起者
+   * @param target 被关注得人
+   * @return 返回中间类UserFollow
+   */
+  public static UserFollow getUserFollow(final User origin, final User target) {
+    return Hib.query(session -> (UserFollow) session
+        .createQuery("from UserFollow  where originId = :originId and targetId = :targetId")
+        .setParameter("originId", origin.getId())
+        .setParameter("targetId", target.getId())
+        // 查询一条数据
+        .uniqueResult());
+  }
 }
 

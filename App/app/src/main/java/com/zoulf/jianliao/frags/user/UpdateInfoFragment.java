@@ -19,6 +19,7 @@ import com.zoulf.common.app.PresenterFragment;
 import com.zoulf.common.widget.PortraitView;
 import com.zoulf.factory.presenter.user.UpdateInfoContract;
 import com.zoulf.factory.presenter.user.UpdateInfoContract.Presenter;
+import com.zoulf.factory.presenter.user.UpdateInfoPresenter;
 import com.zoulf.jianliao.R;
 import com.zoulf.jianliao.activities.MainActivity;
 import com.zoulf.jianliao.frags.media.GalleryFragment;
@@ -177,6 +178,6 @@ public class UpdateInfoFragment extends PresenterFragment<UpdateInfoContract.Pre
 
   @Override
   protected Presenter initPresenter() {
-    return null;
+    return new UpdateInfoPresenter(this);
   }
 }

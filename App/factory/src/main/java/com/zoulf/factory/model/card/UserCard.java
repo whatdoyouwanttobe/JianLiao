@@ -107,7 +107,7 @@ public class UserCard {
     this.modifyAt = modifyAt;
   }
 
-  // 缓存一个对应的User, 不能被GSON框架解析使用ø
+  // 缓存一个对应的User, 不能被GSON框架解析使用
   private transient User user;
 
   public User build() {
