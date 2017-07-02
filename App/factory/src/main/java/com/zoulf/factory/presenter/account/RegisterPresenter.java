@@ -8,6 +8,7 @@ import com.zoulf.factory.data.DataSource;
 import com.zoulf.factory.data.helper.AccountHelper;
 import com.zoulf.factory.model.api.account.RegisterModel;
 import com.zoulf.factory.model.db.User;
+import com.zoulf.factory.persistence.Account;
 import com.zoulf.factory.presenter.BasePresenter;
 import com.zoulf.factory.presenter.account.RegisterContract.View;
 import java.util.regex.Pattern;
@@ -45,9 +46,8 @@ public class RegisterPresenter extends BasePresenter<RegisterContract.View>
       view.showError(R.string.data_account_register_invalid_parameter_password);
     } else {
       // 进行网络请求
-
       // 构造Model，进行请求调用
-      RegisterModel model = new RegisterModel(phone, password, name);
+      RegisterModel model = new RegisterModel(phone, password, name, Account.getPushId());
       // 进行网络请求，并设置回送接口为自己
       AccountHelper.register(model, this);
     }

@@ -14,7 +14,6 @@ import com.zoulf.jianliao.R;
 import com.zoulf.jianliao.activities.MainActivity;
 import net.qiujuer.genius.ui.widget.Button;
 import net.qiujuer.genius.ui.widget.Loading;
-import net.qiujuer.genius.ui.widget.TextView;
 
 /**
  * 登录的界面
@@ -22,8 +21,6 @@ import net.qiujuer.genius.ui.widget.TextView;
 public class LoginFragment extends PresenterFragment<LoginContract.Presenter>
     implements LoginContract.View {
 
-  @BindView(R.id.txt_go_register)
-  TextView mGoRegisterTxt;
   @BindView(R.id.edit_phone)
   EditText mPhone;
   @BindView(R.id.edit_password)
