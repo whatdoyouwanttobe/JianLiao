@@ -55,7 +55,7 @@ public class AccountActivity extends MyActivity implements AccountTrigger {
 
     // 初始化背景
     Glide.with(this)
-        .load(R.drawable.bg_src_tianjin)
+        .load(R.drawable.bg_src_haibian)
         .centerCrop()
         .into(new ViewTarget<ImageView, GlideDrawable>(mBg) {
           @Override

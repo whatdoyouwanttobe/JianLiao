@@ -4,7 +4,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:orientation="vertical"
-tools:background="@drawable/bg_src_tianjin"
+tools:background="@drawable/bg_src_haibian"
 tools:context="com.zoulf.jianliao.frags.user.UpdateInfoFragment">
 
 <android.support.constraint.ConstraintLayout

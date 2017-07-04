@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fd572d5-e186-4804-a234-e3a3d081d850" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/java/main/com/zoulf/web/jianliao/push/factory/UserFactory.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/zoulf/web/jianliao/push/factory/UserFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/JianLiao-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/build/libs/JianLiao-1.0-SNAPSHOT.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/exploded/JianLiao-1.0-SNAPSHOT.war/WEB-INF/classes/com/zoulf/web/jianliao/push/factory/UserFactory.class" afterPath="$PROJECT_DIR$/build/libs/exploded/JianLiao-1.0-SNAPSHOT.war/WEB-INF/classes/com/zoulf/web/jianliao/push/factory/UserFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/app/src/main/java/com/zoulf/jianliao/activities/SearchActivity.java" afterPath="$PROJECT_DIR$/../App/app/src/main/java/com/zoulf/jianliao/activities/SearchActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/app/src/main/res/menu/search.xml" afterPath="$PROJECT_DIR$/../App/app/src/main/res/menu/search.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/com/zoulf/web/jianliao/push/Battery.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/com/zoulf/web/jianliao/push/Riadio.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/com/zoulf/web/jianliao/push/Test.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/JianLiao-1.0-SNAPSHOT.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/exploded/JianLiao-1.0-SNAPSHOT.war/WEB-INF/classes/com/zoulf/web/jianliao/push/Battery.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/exploded/JianLiao-1.0-SNAPSHOT.war/WEB-INF/classes/com/zoulf/web/jianliao/push/Riadio.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/exploded/JianLiao-1.0-SNAPSHOT.war/WEB-INF/classes/com/zoulf/web/jianliao/push/Test.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/factory/src/main/java/com/zoulf/factory/data/helper/UserHelper.java" afterPath="$PROJECT_DIR$/../App/factory/src/main/java/com/zoulf/factory/data/helper/UserHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/factory/src/main/java/com/zoulf/factory/net/RemoteService.java" afterPath="$PROJECT_DIR$/../App/factory/src/main/java/com/zoulf/factory/net/RemoteService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -76,10 +80,9 @@
       <file leaf-file-name="UserFactory.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/factory/UserFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="290" column="17" lean-forward="false" selection-start-line="290" selection-start-column="17" selection-end-line="290" selection-end-column="17" />
+            <state relative-caret-position="388">
+              <caret line="318" column="1" lean-forward="true" selection-start-line="318" selection-start-column="1" selection-end-line="318" selection-end-column="1" />
               <folding>
-                <element signature="e#6960#6990#0" expanded="true" />
                 <marker date="1499048691994" expanded="false" signature="1866:1896" ph="/unchecked/" />
               </folding>
             </state>
@@ -159,9 +162,11 @@
       <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2838">
+            <state relative-caret-position="2508">
               <caret line="129" column="40" lean-forward="false" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -681,11 +686,29 @@
               <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JianLiao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="push" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1238,11 +1261,13 @@
       <workItem from="1498987893375" duration="7115000" />
       <workItem from="1499042954407" duration="5002000" />
       <workItem from="1499126398257" duration="687000" />
+      <workItem from="1499133487008" duration="2184000" />
+      <workItem from="1499142992993" duration="1295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60936000" />
+    <option name="totallyTimeSpent" value="64415000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1419,7 +1444,6 @@
         <state relative-caret-position="4972">
           <caret line="226" column="18" lean-forward="false" selection-start-line="226" selection-start-column="18" selection-end-line="226" selection-end-column="18" />
           <folding>
-            <element signature="e#6960#6990#0" expanded="true" />
             <marker date="1499048691994" expanded="false" signature="1866:1896" ph="/unchecked/" />
           </folding>
         </state>
@@ -1816,31 +1840,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2838">
+        <state relative-caret-position="2508">
           <caret line="129" column="40" lean-forward="false" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/factory/UserFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="290" column="17" lean-forward="false" selection-start-line="290" selection-start-column="17" selection-end-line="290" selection-end-column="17" />
+        <state relative-caret-position="388">
+          <caret line="318" column="1" lean-forward="true" selection-start-line="318" selection-start-column="1" selection-end-line="318" selection-end-column="1" />
           <folding>
-            <element signature="e#6960#6990#0" expanded="true" />
             <marker date="1499048691994" expanded="false" signature="1866:1896" ph="/unchecked/" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/Test.java" />
   </component>
   <component name="masterDetails">
     <states>

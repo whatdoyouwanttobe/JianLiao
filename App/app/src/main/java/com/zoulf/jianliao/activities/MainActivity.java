@@ -94,7 +94,7 @@ public class MainActivity extends MyActivity
     mNavigation.setOnNavigationItemSelectedListener(this);
 
     Glide.with(this)
-        .load(R.drawable.bg_src_morning)
+        .load(R.drawable.bg_src_talking)
         .centerCrop()
         .into(new ViewTarget<View, GlideDrawable>(mLayAppbar) {
           @Override

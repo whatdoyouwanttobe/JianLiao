@@ -58,7 +58,7 @@ public interface RemoteService {
 
   // 用户关注的接口
   @PUT("user/follow/{userId}")
-  Call<RspModel<List<UserCard>>> userFollow(@Path("userId") String userId);
+  Call<RspModel<UserCard>> userFollow(@Path("userId") String userId);
 
 
 }

@@ -19,6 +19,7 @@ import retrofit2.Response;
  */
 
 public class UserHelper {
+
   // 更新用户信息的操作，异步的
   public static void update(UserUpdateModel model, final DataSource.Callback<UserCard> callback) {
     // 调用Retrofit对我们的网络请求接口做代理
@@ -79,6 +80,35 @@ public class UserHelper {
     return call;
   }
 
+  // 关注的网络请求
+  public static void follow(String id, final DataSource.Callback<UserCard> callback) {
+    RemoteService service = NetWork.remote();
+    Call<RspModel<UserCard>> call = service.userFollow(id);
 
+    call.enqueue(new Callback<RspModel<UserCard>>() {
+      @Override
+      public void onResponse(Call<RspModel<UserCard>> call, Response<RspModel<UserCard>> response) {
+        RspModel<UserCard> rspModel = response.body();
+        if (rspModel.success()) {
+          UserCard userCard = rspModel.getResult();
+          // 保存到本地数据库
+          User user = userCard.build();
+          user.save();
+          // TODO 通知联系人列表刷新
+
+          // 返回数据
+          callback.onDataLoaded(rspModel.getResult());
+        } else {
+          Factory.decodeRspCode(rspModel, callback);
+        }
+      }
+
+      @Override
+      public void onFailure(Call<RspModel<UserCard>> call, Throwable t) {
+        callback.onDataNotAvailableLoaded(R.string.data_network_error);
+      }
+    });
+
+  }
 }
 

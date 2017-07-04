@@ -1,7 +1,7 @@
 package com.zoulf.jianliao.frags.search;
 
 
-
+import android.support.annotation.StringRes;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -15,12 +15,18 @@ import com.zoulf.common.widget.EmptyView;
 import com.zoulf.common.widget.PortraitView;
 import com.zoulf.common.widget.recycler.RecyclerAdapter;
 import com.zoulf.factory.model.card.UserCard;
+import com.zoulf.factory.presenter.contract.FollowContract;
+import com.zoulf.factory.presenter.contract.FollowPresenter;
 import com.zoulf.factory.presenter.search.SearchContract;
 import com.zoulf.factory.presenter.search.SearchContract.Presenter;
 import com.zoulf.factory.presenter.search.SearchUserPresenter;
 import com.zoulf.jianliao.R;
 import com.zoulf.jianliao.activities.SearchActivity.SearchFragment;
 import java.util.List;
+import net.qiujuer.genius.ui.Ui;
+import net.qiujuer.genius.ui.compat.UiCompat;
+import net.qiujuer.genius.ui.drawable.LoadingCircleDrawable;
+import net.qiujuer.genius.ui.drawable.LoadingDrawable;
 
 /**
  * 搜索人的界面实现
@@ -98,7 +104,8 @@ public class SearchUserFragment extends PresenterFragment<SearchContract.Present
   /**
    * 每一个Cell的布局操作
    */
-  class MyViewHolder extends RecyclerAdapter.ViewHolder<UserCard> {
+  class MyViewHolder extends RecyclerAdapter.ViewHolder<UserCard>
+      implements FollowContract.View {
 
     @BindView(R.id.im_portrait)
     PortraitView mPortraitView;
@@ -109,8 +116,12 @@ public class SearchUserFragment extends PresenterFragment<SearchContract.Present
     @BindView(R.id.im_follow)
     ImageView mFollow;
 
+    private FollowContract.Presenter mPresenter;
+
     public MyViewHolder(View itemView) {
       super(itemView);
+      // 当前View和Presenter绑定
+      new FollowPresenter(this);
     }
 
     @Override
@@ -127,7 +138,50 @@ public class SearchUserFragment extends PresenterFragment<SearchContract.Present
     @OnClick(R.id.im_follow)
     void onFollowClick() {
       // 发起关注
+      mPresenter.follow(mData.getId());
+    }
 
+    @Override
+    public void showError(@StringRes int str) {
+      if (mFollow.getDrawable() instanceof LoadingDrawable) {
+        // 失败则停止动画，并且显示一个圆圈
+        LoadingDrawable drawable = (LoadingDrawable) mFollow.getDrawable();
+        drawable.setProgress(1);
+        drawable.stop();
+      }
+    }
+
+    @Override
+    public void showLoading() {
+      int minSize = (int) Ui.dipToPx(getResources(), 22);
+      int maxSize = (int) Ui.dipToPx(getResources(), 30);
+      // 初始化一个圆形的动画的Drawable
+      LoadingDrawable drawable = new LoadingCircleDrawable(minSize, maxSize);
+      drawable.setBackgroundColor(0);
+
+      int[] color = new int[]{UiCompat.getColor(getResources(), R.color.white_alpha_208)};
+      drawable.setForegroundColor(color);
+      // 设置进去
+      mFollow.setImageDrawable(drawable);
+      // 启动动画
+      drawable.start();
+    }
+
+    @Override
+    public void setPresenter(FollowContract.Presenter presenter) {
+      mPresenter = presenter;
+    }
+
+    @Override
+    public void onFollowSucceed(UserCard userCard) {
+      // 更改当前界面状态
+      if (mFollow.getDrawable() instanceof LoadingDrawable) {
+        ((LoadingDrawable) mFollow.getDrawable()).stop();
+        // 设置为默认的
+        mFollow.setImageResource(R.drawable.sel_opt_done_add);
+      }
+      // 发起更新
+      updateData(userCard);
     }
   }
 }
