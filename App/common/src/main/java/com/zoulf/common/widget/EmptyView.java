@@ -5,13 +5,13 @@ import android.content.res.TypedArray;
 import android.support.annotation.StringRes;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import com.zoulf.common.R;
 import com.zoulf.common.app.MyApplication;
 import com.zoulf.common.widget.convention.PlaceHolderView;
-import net.qiujuer.genius.ui.widget.ImageView;
 import net.qiujuer.genius.ui.widget.Loading;
-import net.qiujuer.genius.ui.widget.TextView;
 
 /**
  * 简单的占位控件，

@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fd572d5-e186-4804-a234-e3a3d081d850" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/java/main/com/zoulf/web/jianliao/push/factory/UserFactory.class" afterPath="$PROJECT_DIR$/build/classes/java/main/com/zoulf/web/jianliao/push/factory/UserFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/JianLiao-1.0-SNAPSHOT.war" afterPath="$PROJECT_DIR$/build/libs/JianLiao-1.0-SNAPSHOT.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/libs/exploded/JianLiao-1.0-SNAPSHOT.war/WEB-INF/classes/com/zoulf/web/jianliao/push/factory/UserFactory.class" afterPath="$PROJECT_DIR$/build/libs/exploded/JianLiao-1.0-SNAPSHOT.war/WEB-INF/classes/com/zoulf/web/jianliao/push/factory/UserFactory.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/app/src/main/java/com/zoulf/jianliao/activities/SearchActivity.java" afterPath="$PROJECT_DIR$/../App/app/src/main/java/com/zoulf/jianliao/activities/SearchActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/app/src/main/res/menu/search.xml" afterPath="$PROJECT_DIR$/../App/app/src/main/res/menu/search.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/factory/UserFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/factory/UserFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/service/UserService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -73,9 +76,10 @@
       <file leaf-file-name="UserFactory.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/factory/UserFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
+            <state relative-caret-position="22">
               <caret line="290" column="17" lean-forward="false" selection-start-line="290" selection-start-column="17" selection-end-line="290" selection-end-column="17" />
               <folding>
+                <element signature="e#6960#6990#0" expanded="true" />
                 <marker date="1499048691994" expanded="false" signature="1866:1896" ph="/unchecked/" />
               </folding>
             </state>
@@ -85,9 +89,69 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/bean/db/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
+            <state relative-caret-position="286">
               <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#3152#3153#0" expanded="false" />
+                <element signature="e#3171#3172#0" expanded="false" />
+                <element signature="e#3205#3206#0" expanded="false" />
+                <element signature="e#3227#3228#0" expanded="false" />
+                <element signature="e#3256#3257#0" expanded="false" />
+                <element signature="e#3277#3278#0" expanded="false" />
+                <element signature="e#3315#3316#0" expanded="false" />
+                <element signature="e#3341#3342#0" expanded="false" />
+                <element signature="e#3371#3372#0" expanded="false" />
+                <element signature="e#3393#3394#0" expanded="false" />
+                <element signature="e#3433#3434#0" expanded="false" />
+                <element signature="e#3461#3462#0" expanded="false" />
+                <element signature="e#3494#3495#0" expanded="false" />
+                <element signature="e#3519#3520#0" expanded="false" />
+                <element signature="e#3565#3566#0" expanded="false" />
+                <element signature="e#3599#3600#0" expanded="false" />
+                <element signature="e#3632#3633#0" expanded="false" />
+                <element signature="e#3657#3658#0" expanded="false" />
+                <element signature="e#3703#3704#0" expanded="false" />
+                <element signature="e#3737#3738#0" expanded="false" />
+                <element signature="e#3773#3774#0" expanded="false" />
+                <element signature="e#3801#3802#0" expanded="false" />
+                <element signature="e#3853#3854#0" expanded="false" />
+                <element signature="e#3893#3894#0" expanded="false" />
+                <element signature="e#3918#3919#0" expanded="false" />
+                <element signature="e#3938#3939#0" expanded="false" />
+                <element signature="e#3971#3972#0" expanded="false" />
+                <element signature="e#3995#3996#0" expanded="false" />
+                <element signature="e#4025#4026#0" expanded="false" />
+                <element signature="e#4047#4048#0" expanded="false" />
+                <element signature="e#4087#4088#0" expanded="false" />
+                <element signature="e#4115#4116#0" expanded="false" />
+                <element signature="e#4146#4147#0" expanded="false" />
+                <element signature="e#4169#4170#0" expanded="false" />
+                <element signature="e#4211#4212#0" expanded="false" />
+                <element signature="e#4241#4242#0" expanded="false" />
+                <element signature="e#4281#4282#0" expanded="false" />
+                <element signature="e#4306#4307#0" expanded="false" />
+                <element signature="e#4359#4360#0" expanded="false" />
+                <element signature="e#4393#4394#0" expanded="false" />
+                <element signature="e#4433#4434#0" expanded="false" />
+                <element signature="e#4458#4459#0" expanded="false" />
+                <element signature="e#4511#4512#0" expanded="false" />
+                <element signature="e#4545#4546#0" expanded="false" />
+                <element signature="e#4591#4592#0" expanded="false" />
+                <element signature="e#4622#4623#0" expanded="false" />
+                <element signature="e#4776#4777#0" expanded="false" />
+                <element signature="e#4802#4803#0" expanded="false" />
+                <element signature="e#4859#4860#0" expanded="false" />
+                <element signature="e#4895#4896#0" expanded="false" />
+                <element signature="e#4938#4939#0" expanded="false" />
+                <element signature="e#4964#4965#0" expanded="false" />
+                <element signature="e#5021#5022#0" expanded="false" />
+                <element signature="e#5057#5058#0" expanded="false" />
+                <element signature="e#5092#5093#0" expanded="false" />
+                <element signature="e#5115#5116#0" expanded="false" />
+                <element signature="e#5161#5162#0" expanded="false" />
+                <element signature="e#5191#5192#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,7 +159,7 @@
       <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
+            <state relative-caret-position="2838">
               <caret line="129" column="40" lean-forward="false" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
               <folding />
             </state>
@@ -107,8 +171,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Kotlin Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -515,6 +579,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/Randomer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/factory/UserFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/Test.java" />
       </list>
     </option>
   </component>
@@ -532,13 +597,14 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="683" />
-    <option name="width" value="687" />
-    <option name="height" value="728" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -551,7 +617,83 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JianLiao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JianLiao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JianLiao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JianLiao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="push" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -1095,11 +1237,12 @@
       <workItem from="1498961657201" duration="1658000" />
       <workItem from="1498987893375" duration="7115000" />
       <workItem from="1499042954407" duration="5002000" />
+      <workItem from="1499126398257" duration="687000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60249000" />
+    <option name="totallyTimeSpent" value="60936000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1111,7 +1254,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="0" width="687" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1133,10 +1276,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63754046" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63722396" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21083455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21083455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1204,58 +1347,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/bean/card/UserCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#689#690#0" expanded="false" />
-            <element signature="e#716#717#0" expanded="false" />
-            <element signature="e#1164#1165#0" expanded="false" />
-            <element signature="e#1183#1184#0" expanded="false" />
-            <element signature="e#1217#1218#0" expanded="false" />
-            <element signature="e#1239#1240#0" expanded="false" />
-            <element signature="e#1268#1269#0" expanded="false" />
-            <element signature="e#1289#1290#0" expanded="false" />
-            <element signature="e#1327#1328#0" expanded="false" />
-            <element signature="e#1353#1354#0" expanded="false" />
-            <element signature="e#1383#1384#0" expanded="false" />
-            <element signature="e#1405#1406#0" expanded="false" />
-            <element signature="e#1445#1446#0" expanded="false" />
-            <element signature="e#1473#1474#0" expanded="false" />
-            <element signature="e#1506#1507#0" expanded="false" />
-            <element signature="e#1531#1532#0" expanded="false" />
-            <element signature="e#1577#1578#0" expanded="false" />
-            <element signature="e#1611#1612#0" expanded="false" />
-            <element signature="e#1640#1641#0" expanded="false" />
-            <element signature="e#1661#1662#0" expanded="false" />
-            <element signature="e#1699#1700#0" expanded="false" />
-            <element signature="e#1725#1726#0" expanded="false" />
-            <element signature="e#1750#1751#0" expanded="false" />
-            <element signature="e#1770#1771#0" expanded="false" />
-            <element signature="e#1803#1804#0" expanded="false" />
-            <element signature="e#1827#1828#0" expanded="false" />
-            <element signature="e#1856#1857#0" expanded="false" />
-            <element signature="e#1880#1881#0" expanded="false" />
-            <element signature="e#1921#1922#0" expanded="false" />
-            <element signature="e#1953#1954#0" expanded="false" />
-            <element signature="e#1984#1985#0" expanded="false" />
-            <element signature="e#2010#2011#0" expanded="false" />
-            <element signature="e#2055#2056#0" expanded="false" />
-            <element signature="e#2091#2092#0" expanded="false" />
-            <element signature="e#2122#2123#0" expanded="false" />
-            <element signature="e#2147#2148#0" expanded="false" />
-            <element signature="e#2190#2191#0" expanded="false" />
-            <element signature="e#2217#2218#0" expanded="false" />
-            <element signature="e#2257#2258#0" expanded="false" />
-            <element signature="e#2282#2283#0" expanded="false" />
-            <element signature="e#2335#2336#0" expanded="false" />
-            <element signature="e#2369#2370#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -1328,6 +1419,7 @@
         <state relative-caret-position="4972">
           <caret line="226" column="18" lean-forward="false" selection-start-line="226" selection-start-column="18" selection-end-line="226" selection-end-column="18" />
           <folding>
+            <element signature="e#6960#6990#0" expanded="true" />
             <marker date="1499048691994" expanded="false" signature="1866:1896" ph="/unchecked/" />
           </folding>
         </state>
@@ -1613,25 +1705,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#423#424#0" expanded="false" />
-            <element signature="e#444#445#0" expanded="false" />
-            <element signature="e#482#483#0" expanded="false" />
-            <element signature="e#508#509#0" expanded="false" />
-            <element signature="e#541#542#0" expanded="false" />
-            <element signature="e#566#567#0" expanded="false" />
-            <element signature="e#612#613#0" expanded="false" />
-            <element signature="e#646#647#0" expanded="false" />
-            <element signature="e#675#676#0" expanded="false" />
-            <element signature="e#696#697#0" expanded="false" />
-            <element signature="e#734#735#0" expanded="false" />
-            <element signature="e#760#761#0" expanded="false" />
-            <element signature="e#785#786#0" expanded="false" />
-            <element signature="e#805#806#0" expanded="false" />
-            <element signature="e#838#839#0" expanded="false" />
-            <element signature="e#862#863#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1639,25 +1712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#815#816#0" expanded="false" />
-            <element signature="e#836#837#0" expanded="false" />
-            <element signature="e#876#877#0" expanded="false" />
-            <element signature="e#902#903#0" expanded="false" />
-            <element signature="e#934#935#0" expanded="false" />
-            <element signature="e#958#959#0" expanded="false" />
-            <element signature="e#1002#1003#0" expanded="false" />
-            <element signature="e#1034#1035#0" expanded="false" />
-            <element signature="e#1064#1065#0" expanded="false" />
-            <element signature="e#1086#1087#0" expanded="false" />
-            <element signature="e#1126#1127#0" expanded="false" />
-            <element signature="e#1154#1155#0" expanded="false" />
-            <element signature="e#1183#1184#0" expanded="false" />
-            <element signature="e#1206#1207#0" expanded="false" />
-            <element signature="e#1245#1246#0" expanded="false" />
-            <element signature="e#1268#1269#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1665,19 +1719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#396#397#0" expanded="false" />
-            <element signature="e#428#429#0" expanded="false" />
-            <element signature="e#461#462#0" expanded="false" />
-            <element signature="e#486#487#0" expanded="false" />
-            <element signature="e#532#533#0" expanded="false" />
-            <element signature="e#566#567#0" expanded="false" />
-            <element signature="e#597#598#0" expanded="false" />
-            <element signature="e#620#621#0" expanded="false" />
-            <element signature="e#662#663#0" expanded="false" />
-            <element signature="e#692#693#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1685,7 +1726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1708,15 +1748,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/bean/db/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
+        <state relative-caret-position="286">
           <caret line="32" column="11" lean-forward="false" selection-start-line="32" selection-start-column="11" selection-end-line="32" selection-end-column="11" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3152#3153#0" expanded="false" />
+            <element signature="e#3171#3172#0" expanded="false" />
+            <element signature="e#3205#3206#0" expanded="false" />
+            <element signature="e#3227#3228#0" expanded="false" />
+            <element signature="e#3256#3257#0" expanded="false" />
+            <element signature="e#3277#3278#0" expanded="false" />
+            <element signature="e#3315#3316#0" expanded="false" />
+            <element signature="e#3341#3342#0" expanded="false" />
+            <element signature="e#3371#3372#0" expanded="false" />
+            <element signature="e#3393#3394#0" expanded="false" />
+            <element signature="e#3433#3434#0" expanded="false" />
+            <element signature="e#3461#3462#0" expanded="false" />
+            <element signature="e#3494#3495#0" expanded="false" />
+            <element signature="e#3519#3520#0" expanded="false" />
+            <element signature="e#3565#3566#0" expanded="false" />
+            <element signature="e#3599#3600#0" expanded="false" />
+            <element signature="e#3632#3633#0" expanded="false" />
+            <element signature="e#3657#3658#0" expanded="false" />
+            <element signature="e#3703#3704#0" expanded="false" />
+            <element signature="e#3737#3738#0" expanded="false" />
+            <element signature="e#3773#3774#0" expanded="false" />
+            <element signature="e#3801#3802#0" expanded="false" />
+            <element signature="e#3853#3854#0" expanded="false" />
+            <element signature="e#3893#3894#0" expanded="false" />
+            <element signature="e#3918#3919#0" expanded="false" />
+            <element signature="e#3938#3939#0" expanded="false" />
+            <element signature="e#3971#3972#0" expanded="false" />
+            <element signature="e#3995#3996#0" expanded="false" />
+            <element signature="e#4025#4026#0" expanded="false" />
+            <element signature="e#4047#4048#0" expanded="false" />
+            <element signature="e#4087#4088#0" expanded="false" />
+            <element signature="e#4115#4116#0" expanded="false" />
+            <element signature="e#4146#4147#0" expanded="false" />
+            <element signature="e#4169#4170#0" expanded="false" />
+            <element signature="e#4211#4212#0" expanded="false" />
+            <element signature="e#4241#4242#0" expanded="false" />
+            <element signature="e#4281#4282#0" expanded="false" />
+            <element signature="e#4306#4307#0" expanded="false" />
+            <element signature="e#4359#4360#0" expanded="false" />
+            <element signature="e#4393#4394#0" expanded="false" />
+            <element signature="e#4433#4434#0" expanded="false" />
+            <element signature="e#4458#4459#0" expanded="false" />
+            <element signature="e#4511#4512#0" expanded="false" />
+            <element signature="e#4545#4546#0" expanded="false" />
+            <element signature="e#4591#4592#0" expanded="false" />
+            <element signature="e#4622#4623#0" expanded="false" />
+            <element signature="e#4776#4777#0" expanded="false" />
+            <element signature="e#4802#4803#0" expanded="false" />
+            <element signature="e#4859#4860#0" expanded="false" />
+            <element signature="e#4895#4896#0" expanded="false" />
+            <element signature="e#4938#4939#0" expanded="false" />
+            <element signature="e#4964#4965#0" expanded="false" />
+            <element signature="e#5021#5022#0" expanded="false" />
+            <element signature="e#5057#5058#0" expanded="false" />
+            <element signature="e#5092#5093#0" expanded="false" />
+            <element signature="e#5115#5116#0" expanded="false" />
+            <element signature="e#5161#5162#0" expanded="false" />
+            <element signature="e#5191#5192#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
+        <state relative-caret-position="2838">
           <caret line="129" column="40" lean-forward="false" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
           <folding />
         </state>
@@ -1724,11 +1824,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/factory/UserFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
+        <state relative-caret-position="22">
           <caret line="290" column="17" lean-forward="false" selection-start-line="290" selection-start-column="17" selection-end-line="290" selection-end-column="17" />
           <folding>
+            <element signature="e#6960#6990#0" expanded="true" />
             <marker date="1499048691994" expanded="false" signature="1866:1896" ph="/unchecked/" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

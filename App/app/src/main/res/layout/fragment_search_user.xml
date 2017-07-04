@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="com.zoulf.jianliao.frags.search.SearchUserFragment">
+
+  <android.support.v7.widget.RecyclerView
+    android:id="@+id/recycler"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/len_2"
+    android:paddingBottom="@dimen/len_2"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:visibility="gone"/>
+
+  <com.zoulf.common.widget.EmptyView
+    android:id="@+id/empty"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
+
+</FrameLayout>
