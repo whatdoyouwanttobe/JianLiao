@@ -4,13 +4,14 @@ import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
 import com.raizlabs.android.dbflow.annotation.Table;
 import com.raizlabs.android.dbflow.structure.BaseModel;
+import com.zoulf.factory.model.Author;
 import java.util.Date;
 
 /**
  * @author Zoulf.
  */
 @Table(database = AppDatabase.class)
-public class User extends BaseModel {
+public class User extends BaseModel implements Author {
 
   public static final int SEX_MAN = 1;
   public static final int SEX_WOMAN = 2;

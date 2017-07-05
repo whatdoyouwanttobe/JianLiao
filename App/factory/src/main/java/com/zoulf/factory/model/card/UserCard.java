@@ -1,5 +1,6 @@
 package com.zoulf.factory.model.card;
 
+import com.zoulf.factory.model.Author;
 import com.zoulf.factory.model.db.User;
 import java.util.Date;
 
@@ -7,7 +8,7 @@ import java.util.Date;
  * @author Zoulf.
  */
 
-public class UserCard {
+public class UserCard implements Author{
   private String id;
   private String name;
   private String phone;
