@@ -14,6 +14,7 @@ import com.zoulf.factory.model.db.User_Table;
  */
 
 public class Account {
+
   private static final String KEY_PUSH_ID = "KEY_PUSH_ID";
   private static final String KEY_IS_BIND = "KEY_IS_BIND";
   private static final String KEY_TOKEN = "KEY_TOKEN";
@@ -151,6 +152,15 @@ public class Account {
         .from(User.class)
         .where(User_Table.id.eq(userId))
         .querySingle();
+  }
+
+  /**
+   * 返回用户Id
+   *
+   * @return 用户Id
+   */
+  public static String getUserId() {
+    return getUser().getId();
   }
 
   /**

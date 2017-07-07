@@ -21,6 +21,7 @@ import com.zoulf.factory.presenter.search.SearchContract;
 import com.zoulf.factory.presenter.search.SearchContract.Presenter;
 import com.zoulf.factory.presenter.search.SearchUserPresenter;
 import com.zoulf.jianliao.R;
+import com.zoulf.jianliao.activities.PersonalActivity;
 import com.zoulf.jianliao.activities.SearchActivity.SearchFragment;
 import java.util.List;
 import net.qiujuer.genius.ui.Ui;
@@ -129,6 +130,12 @@ public class SearchUserFragment extends PresenterFragment<SearchContract.Present
       mPortraitView.setup(Glide.with(SearchUserFragment.this), userCard);
       mName.setText(userCard.getName());
       mFollow.setEnabled(!userCard.isFollow());
+    }
+
+    @OnClick(R.id.im_portrait)
+    void onPortraitClick() {
+      // 显示信息
+      PersonalActivity.show(getContext(),mData.getId());
     }
 
     @OnClick(R.id.im_follow)

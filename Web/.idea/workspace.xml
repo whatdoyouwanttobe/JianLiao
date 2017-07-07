@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fd572d5-e186-4804-a234-e3a3d081d850" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/com/zoulf/web/jianliao/push/Battery.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/com/zoulf/web/jianliao/push/Riadio.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/java/main/com/zoulf/web/jianliao/push/Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/JianLiao-1.0-SNAPSHOT.war" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/exploded/JianLiao-1.0-SNAPSHOT.war/WEB-INF/classes/com/zoulf/web/jianliao/push/Battery.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/exploded/JianLiao-1.0-SNAPSHOT.war/WEB-INF/classes/com/zoulf/web/jianliao/push/Riadio.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/exploded/JianLiao-1.0-SNAPSHOT.war/WEB-INF/classes/com/zoulf/web/jianliao/push/Test.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/.idea/misc.xml" afterPath="$PROJECT_DIR$/../App/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/app/build.gradle" afterPath="$PROJECT_DIR$/../App/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../App/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/app/src/main/java/com/zoulf/jianliao/frags/main/ContactFragment.java" afterPath="$PROJECT_DIR$/../App/app/src/main/java/com/zoulf/jianliao/frags/main/ContactFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/../App/app/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/common/src/main/java/com/zoulf/common/app/MyFragment.java" afterPath="$PROJECT_DIR$/../App/common/src/main/java/com/zoulf/common/app/MyFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/common/src/main/java/com/zoulf/common/widget/recycler/RecyclerAdapter.java" afterPath="$PROJECT_DIR$/../App/common/src/main/java/com/zoulf/common/widget/recycler/RecyclerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/common/src/main/java/com/zoulf/factory/presenter/BaseContract.java" afterPath="$PROJECT_DIR$/../App/common/src/main/java/com/zoulf/factory/presenter/BaseContract.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/factory/src/main/java/com/zoulf/factory/data/helper/UserHelper.java" afterPath="$PROJECT_DIR$/../App/factory/src/main/java/com/zoulf/factory/data/helper/UserHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/factory/src/main/java/com/zoulf/factory/model/db/User.java" afterPath="$PROJECT_DIR$/../App/factory/src/main/java/com/zoulf/factory/model/db/User.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/factory/src/main/java/com/zoulf/factory/net/RemoteService.java" afterPath="$PROJECT_DIR$/../App/factory/src/main/java/com/zoulf/factory/net/RemoteService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/factory/src/main/java/com/zoulf/factory/persistence/Account.java" afterPath="$PROJECT_DIR$/../App/factory/src/main/java/com/zoulf/factory/persistence/Account.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../App/lang/src/main/res/values/strings-label.xml" afterPath="$PROJECT_DIR$/../App/lang/src/main/res/values/strings-label.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -81,8 +84,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/factory/UserFactory.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="388">
-              <caret line="318" column="1" lean-forward="true" selection-start-line="318" selection-start-column="1" selection-end-line="318" selection-end-column="1" />
+              <caret line="318" column="1" lean-forward="false" selection-start-line="318" selection-start-column="1" selection-end-line="318" selection-end-column="1" />
               <folding>
+                <element signature="e#6960#6990#0" expanded="true" />
                 <marker date="1499048691994" expanded="false" signature="1866:1896" ph="/unchecked/" />
               </folding>
             </state>
@@ -623,6 +627,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -650,72 +655,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JianLiao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JianLiao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JianLiao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1263,11 +1205,12 @@
       <workItem from="1499126398257" duration="687000" />
       <workItem from="1499133487008" duration="2184000" />
       <workItem from="1499142992993" duration="1295000" />
+      <workItem from="1499401775531" duration="1068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64415000" />
+    <option name="totallyTimeSpent" value="65483000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1279,7 +1222,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1301,7 +1244,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63722396" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.63722396" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21083455" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1444,6 +1387,7 @@
         <state relative-caret-position="4972">
           <caret line="226" column="18" lean-forward="false" selection-start-line="226" selection-start-column="18" selection-end-line="226" selection-end-column="18" />
           <folding>
+            <element signature="e#6960#6990#0" expanded="true" />
             <marker date="1499048691994" expanded="false" signature="1866:1896" ph="/unchecked/" />
           </folding>
         </state>
@@ -1851,8 +1795,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/zoulf/web/jianliao/push/factory/UserFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
-          <caret line="318" column="1" lean-forward="true" selection-start-line="318" selection-start-column="1" selection-end-line="318" selection-end-column="1" />
+          <caret line="318" column="1" lean-forward="false" selection-start-line="318" selection-start-column="1" selection-end-line="318" selection-end-column="1" />
           <folding>
+            <element signature="e#6960#6990#0" expanded="true" />
             <marker date="1499048691994" expanded="false" signature="1866:1896" ph="/unchecked/" />
           </folding>
         </state>

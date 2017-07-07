@@ -6,18 +6,27 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 import butterknife.BindView;
+import butterknife.OnClick;
 import com.bumptech.glide.Glide;
-import com.zoulf.common.app.MyFragment;
+import com.zoulf.common.app.PresenterFragment;
 import com.zoulf.common.widget.EmptyView;
 import com.zoulf.common.widget.PortraitView;
 import com.zoulf.common.widget.recycler.RecyclerAdapter;
+import com.zoulf.common.widget.recycler.RecyclerAdapter.AdapterListenerImpl;
+import com.zoulf.common.widget.recycler.RecyclerAdapter.ViewHolder;
 import com.zoulf.factory.model.db.User;
+import com.zoulf.factory.presenter.contract.ContactContract;
+import com.zoulf.factory.presenter.contract.ContactContract.Presenter;
+import com.zoulf.factory.presenter.contract.ContactPresenter;
 import com.zoulf.jianliao.R;
+import com.zoulf.jianliao.activities.MessageActivity;
+import com.zoulf.jianliao.activities.PersonalActivity;
 
 /**
  * @author Zoulf.
  */
-public class ContactFragment extends MyFragment {
+public class ContactFragment extends PresenterFragment<ContactContract.Presenter>
+    implements ContactContract.View {
 
   @BindView(R.id.empty)
   EmptyView mEmptyView;
@@ -55,8 +64,42 @@ public class ContactFragment extends MyFragment {
       }
     });
 
+    // 点击事件监听
+    mAdapter.setListener(new AdapterListenerImpl<User>() {
+      @Override
+      public void onItemClick(ViewHolder holder, User user) {
+        // 跳转到聊天界面
+        MessageActivity.show(getContext(), user);
+      }
+    });
+
+    // 初始化占位布局
     mEmptyView.bind(mRecycler);
     setPlaceHolderView(mEmptyView);
+  }
+
+  @Override
+  protected void onFirstInit() {
+    super.onFirstInit();
+    // 进行一次数据加载
+    mPresenter.start();
+  }
+
+  @Override
+  protected Presenter initPresenter() {
+    // 初始化Presenter
+    return new ContactPresenter(this);
+  }
+
+  @Override
+  public RecyclerAdapter<User> getRecyclerAdapter() {
+    return mAdapter;
+  }
+
+  @Override
+  public void onAdapterDataChanged() {
+    // 进行界面操作
+    mPlaceHolderView.triggerOkOrEmpty(mAdapter.getItemCount() > 0);
   }
 
   class MyViewHolder extends RecyclerAdapter.ViewHolder<User> {
@@ -79,6 +122,12 @@ public class ContactFragment extends MyFragment {
       mPortraitView.setup(Glide.with(ContactFragment.this), user);
       mName.setText(user.getName());
       mDesc.setText(user.getDesc());
+    }
+
+    @OnClick(R.id.im_portrait)
+    void onPortraitClick() {
+      // 显示信息
+      PersonalActivity.show(getContext(), mData.getId());
     }
   }
 }

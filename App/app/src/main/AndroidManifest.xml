@@ -43,25 +43,40 @@
       android:name=".activities.MainActivity"
       android:screenOrientation="portrait"
       android:theme="@style/AppTheme.Main"/>
+
     <activity
       android:name=".activities.AccountActivity"
       android:theme="@style/AppTheme.Account"/>
+
     <activity
       android:name="com.yalantis.ucrop.UCropActivity"
       android:screenOrientation="portrait"
       android:theme="@style/AppTheme"/>
+
     <activity
       android:label="@string/title_activity_user"
       android:name=".activities.UserActivity"
       android:screenOrientation="portrait"
-      android:theme="@style/AppTheme.TransStatusBar">
-    </activity>
+      android:theme="@style/AppTheme.TransStatusBar"/>
+
     <activity
       android:label="@string/title_search"
       android:name=".activities.SearchActivity"
       android:screenOrientation="portrait"
-      android:theme="@style/AppTheme.TransStatusBar">
-    </activity>
+      android:theme="@style/AppTheme.TransStatusBar"/>
+
+    <activity
+      android:label="@string/title_activity_message"
+      android:name=".activities.MessageActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.TransStatusBar"/>
+
+    <activity
+      android:label="@string/title_activity_personal"
+      android:name=".activities.PersonalActivity"
+      android:screenOrientation="portrait"
+      android:theme="@style/AppTheme.TransStatusBar"/>
+
   </application>
 
 </manifest>

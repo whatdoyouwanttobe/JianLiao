@@ -64,10 +64,10 @@ public class MainActivity extends MyActivity
 
   @Override
   protected boolean initArgs(Bundle bundle) {
-    if(Account.isComplete()) {
+    if (Account.isComplete()) {
       // 判断用户信息是否完全，完全则走正常流程
       return super.initArgs(bundle);
-    }else{
+    } else {
       UserActivity.show(this);
       return false;
     }
@@ -87,8 +87,8 @@ public class MainActivity extends MyActivity
         getSupportFragmentManager(), this);
     mNavHelper.add(R.id.action_home, new NavHelper.Tab<>(ActiveFragment.class, R.string.title_home))
         .add(R.id.action_group, new NavHelper.Tab<>(GroupFragment.class, R.string.title_group))
-        .add(R.id.action_contact, new NavHelper.Tab<>(ContactFragment.class, R.string.title_contact));
-
+        .add(R.id.action_contact,
+            new NavHelper.Tab<>(ContactFragment.class, R.string.title_contact));
 
     // 添加对底部按钮点击的监听
     mNavigation.setOnNavigationItemSelectedListener(this);
@@ -98,7 +98,8 @@ public class MainActivity extends MyActivity
         .centerCrop()
         .into(new ViewTarget<View, GlideDrawable>(mLayAppbar) {
           @Override
-          public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> glideAnimation) {
+          public void onResourceReady(GlideDrawable resource,
+              GlideAnimation<? super GlideDrawable> glideAnimation) {
             this.view.setBackground(resource.getCurrent());
           }
         });
@@ -112,6 +113,14 @@ public class MainActivity extends MyActivity
     Menu menu = mNavigation.getMenu();
     // 触发首次选中Home
     menu.performIdentifierAction(R.id.action_home, 0);
+
+    // 初始化头像加载
+    mPortrait.setup(Glide.with(this), Account.getUser());
+  }
+
+  @OnClick(R.id.im_portrait)
+  void onPortraitClick() {
+    PersonalActivity.show(this, Account.getUserId());
   }
 
   @OnClick(R.id.im_search)
@@ -157,7 +166,6 @@ public class MainActivity extends MyActivity
   public void onTabChanged(NavHelper.Tab<Integer> newTab, NavHelper.Tab<Integer> oldTab) {
     // 从额外字段中取出我们的Title资源Id
     mTitle.setText(newTab.extra);
-
 
     // 对浮动按钮进行隐藏与显示的动画
     float transY = 0;
