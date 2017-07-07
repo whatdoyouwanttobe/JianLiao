@@ -113,7 +113,7 @@ public class PersonalActivity extends PresenterToolbarActivity<PersonalContract.
 
   @Override
   public String getUserId() {
-    return null;
+    return userId;
   }
 
   @Override
