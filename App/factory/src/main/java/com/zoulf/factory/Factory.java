@@ -7,6 +7,12 @@ import com.raizlabs.android.dbflow.config.FlowConfig;
 import com.raizlabs.android.dbflow.config.FlowManager;
 import com.zoulf.common.app.MyApplication;
 import com.zoulf.factory.data.DataSource;
+import com.zoulf.factory.data.group.GroupCenter;
+import com.zoulf.factory.data.group.GroupDispatcher;
+import com.zoulf.factory.data.message.MessageCenter;
+import com.zoulf.factory.data.message.MessageDispatcher;
+import com.zoulf.factory.data.user.UserCenter;
+import com.zoulf.factory.data.user.UserDispatcher;
 import com.zoulf.factory.model.api.RspModel;
 import com.zoulf.factory.persistence.Account;
 import com.zoulf.factory.untils.DBFlowExclusionStrategy;
@@ -157,9 +163,37 @@ public class Factory {
 
   /**
    * 处理推送来的消息
+   *
    * @param message 消息
    */
   public static void dispatchPush(String message) {
     // TODO
+  }
+
+  /**
+   * 获取一个用户中心的实现类
+   *
+   * @return 用户中心的规范接口
+   */
+  public static UserCenter getUserCenter() {
+    return UserDispatcher.instance();
+  }
+
+  /**
+   * 获取一个消息中心的实现类
+   *
+   * @return 消息中心的规范接口
+   */
+  public static MessageCenter getMessageCenter() {
+    return MessageDispatcher.instance();
+  }
+
+  /**
+   * 获取一个群处理中心的实现类
+   *
+   * @return 群中心的规范接口
+   */
+  public static GroupCenter getGroupCenter() {
+    return GroupDispatcher.instance();
   }
 }

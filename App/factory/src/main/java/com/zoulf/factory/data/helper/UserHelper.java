@@ -37,10 +37,8 @@ public class UserHelper {
         RspModel<UserCard> rspModel = response.body();
         if (rspModel.success()) {
           UserCard userCard = rspModel.getResult();
-          // 数据库的存储操作，需要把UserCard转换为User
-          // 保存用户信息
-          User user = userCard.build();
-          user.save();
+          // 唤起进行保存的操作
+          Factory.getUserCenter().dispatch(userCard);
           // 返回成功
           callback.onDataLoaded(userCard);
         } else {
@@ -95,11 +93,8 @@ public class UserHelper {
         RspModel<UserCard> rspModel = response.body();
         if (rspModel.success()) {
           UserCard userCard = rspModel.getResult();
-          // 保存到本地数据库
-          User user = userCard.build();
-          user.save();
-          // TODO 通知联系人列表刷新
-
+          // 唤起进行保存的操作
+          Factory.getUserCenter().dispatch(userCard);
           // 返回数据
           callback.onDataLoaded(rspModel.getResult());
         } else {
@@ -115,8 +110,10 @@ public class UserHelper {
 
   }
 
-  // 刷新联系人的操作
-  public static void refreshContacts(final DataSource.Callback<List<UserCard>> callback) {
+  // 刷新联系人的操作，不需要Callback，直接存储到数据库，
+  // 并通过数据库观察者进行通知界面更新，
+  // 界面更新的时候进行对比，然后差异更新
+  public static void refreshContacts() {
     RemoteService service = NetWork.remote();
     service.userContacts()
         .enqueue(new Callback<RspModel<List<UserCard>>>() {
@@ -125,16 +122,22 @@ public class UserHelper {
               Response<RspModel<List<UserCard>>> response) {
             RspModel<List<UserCard>> rspModel = response.body();
             if (rspModel.success()) {
-              // 返回数据
-              callback.onDataLoaded(rspModel.getResult());
+              // 拿到集合
+              List<UserCard> cards = rspModel.getResult();
+              if (cards == null || cards.size() == 0)
+                return;
+
+              UserCard[] cards1 = cards.toArray(new UserCard[0]);
+              // CollectionUtil.toArray(cards, UserCard.class);
+              Factory.getUserCenter().dispatch(cards1);
             } else {
-              Factory.decodeRspCode(rspModel, callback);
+              Factory.decodeRspCode(rspModel, null);
             }
           }
 
           @Override
           public void onFailure(Call<RspModel<List<UserCard>>> call, Throwable t) {
-            callback.onDataNotAvailableLoaded(R.string.data_network_error);
+            // nothing
           }
         });
   }
@@ -147,6 +150,7 @@ public class UserHelper {
         .querySingle();
   }
 
+  // 从网络查询某用户的信息
   public static User findFromNet(String id) {
 
     RemoteService remoteService = NetWork.remote();
@@ -154,11 +158,9 @@ public class UserHelper {
       Response<RspModel<UserCard>> response = remoteService.userFind(id).execute();
       UserCard card = response.body().getResult();
       if (card != null) {
-
-        // TODO 数据库的存储但是没有通知
         User user = card.build();
-        user.save();
-
+        // 数据库的存储并通知
+        Factory.getUserCenter().dispatch(card);
         return user;
       }
 

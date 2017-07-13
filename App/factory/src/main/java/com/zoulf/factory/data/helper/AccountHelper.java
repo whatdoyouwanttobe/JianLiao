@@ -40,8 +40,7 @@ public class AccountHelper {
   /**
    * 登录的接口，异步的调用
    *
-   * @param model 传递一个登录
-   * 的model
+   * @param model 传递一个登录 的model
    * @param callback 成功与失败的接口回送
    */
   public static void login(final LoginModel model, final DataSource.Callback<User> callback) {
@@ -96,22 +95,7 @@ public class AccountHelper {
         AccountRspModel accountRspModel = rspModel.getResult();
         // 获取我的信息
         User user = accountRspModel.getUser();
-        // 进行的是数据库写入和缓存绑定
-        // 第一种，直接保存
-        user.save();
-
-//          第二种通过ModelAdapter
-//          FlowManager.getModelAdapter(User.class)
-//              .save(user);
-//          第三种，事务中
-//          DatabaseDefinition definition = FlowManager.getDatabase(AppDatabase.class);
-//          definition.beginTransactionAsync(new ITransaction() {
-//            @Override
-//            public void execute(DatabaseWrapper databaseWrapper) {
-//              FlowManager.getModelAdapter(User.class)
-//                  .save(user);
-//            }
-//          }).build().execute();
+        DbHelper.save(User.class, user);
 
         // 同步到XML持久化中
         Account.login(accountRspModel);

@@ -4,8 +4,6 @@ import com.raizlabs.android.dbflow.annotation.Column;
 import com.raizlabs.android.dbflow.annotation.ForeignKey;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
 import com.raizlabs.android.dbflow.annotation.Table;
-import com.raizlabs.android.dbflow.structure.BaseModel;
-import com.zoulf.factory.untils.DiffUiDataCallback;
 import java.util.Date;
 import java.util.Objects;
 
@@ -17,7 +15,7 @@ import java.util.Objects;
  * @version 1.0.0
  */
 @Table(database = AppDatabase.class)
-public class Session extends BaseModel implements DiffUiDataCallback.UiDataDiffer<Session> {
+public class Session extends BaseDbModel<Session> {
     @PrimaryKey
     private String id; // Id, 是Message中的接收者User的Id或者群的Id
     @Column
@@ -135,13 +133,13 @@ public class Session extends BaseModel implements DiffUiDataCallback.UiDataDiffe
         Session session = (Session) o;
 
         return receiverType == session.receiverType
-                && unReadCount == session.unReadCount
-                && Objects.equals(id, session.id)
-                && Objects.equals(picture, session.picture)
-                && Objects.equals(title, session.title)
-                && Objects.equals(content, session.content)
-                && Objects.equals(modifyAt, session.modifyAt)
-                && Objects.equals(message, session.message);
+            && unReadCount == session.unReadCount
+            && Objects.equals(id, session.id)
+            && Objects.equals(picture, session.picture)
+            && Objects.equals(title, session.title)
+            && Objects.equals(content, session.content)
+            && Objects.equals(modifyAt, session.modifyAt)
+            && Objects.equals(message, session.message);
     }
 
     @Override
@@ -154,13 +152,13 @@ public class Session extends BaseModel implements DiffUiDataCallback.UiDataDiffe
     @Override
     public boolean isSame(Session oldT) {
         return Objects.equals(id, oldT.id)
-                && Objects.equals(receiverType, oldT.receiverType);
+            && Objects.equals(receiverType, oldT.receiverType);
     }
 
     @Override
     public boolean isUiContentSame(Session oldT) {
         return this.content.equals(oldT.content)
-                && Objects.equals(this.modifyAt, oldT.modifyAt);
+            && Objects.equals(this.modifyAt, oldT.modifyAt);
     }
 
 
@@ -181,6 +179,10 @@ public class Session extends BaseModel implements DiffUiDataCallback.UiDataDiffe
             identify.id = message.getGroup().getId();
         }
         return identify;
+    }
+
+    public void refreshToNow() {
+        // TODO 刷新会话对应的信息为当前Message的最新状态
     }
 
 
@@ -204,7 +206,7 @@ public class Session extends BaseModel implements DiffUiDataCallback.UiDataDiffe
 
             Identify identify = (Identify) o;
             return type == identify.type
-                    && (id != null ? id.equals(identify.id) : identify.id == null);
+                && (id != null ? id.equals(identify.id) : identify.id == null);
         }
 
         @Override

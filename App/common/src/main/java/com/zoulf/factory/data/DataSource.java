@@ -28,7 +28,6 @@ public interface DataSource {
 
     // 数据加载成功，网络请求成功
     void onDataLoaded(T t);
-
   }
 
   /**
@@ -40,6 +39,10 @@ public interface DataSource {
 
     // 数据加载失败，网络请求失败
     void onDataNotAvailableLoaded(@StringRes int strRes);
-
   }
+
+  /**
+   * 销毁操作
+   */
+  void dispose();
 }

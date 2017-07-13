@@ -35,7 +35,7 @@ public class NetWork {
     if (instance.retrofit != null)
       return instance.retrofit;
 
-    // 得到一个OK Client
+    // 得到一个OKClient
     OkHttpClient client = new OkHttpClient.Builder()
         // 给所有的请求添加一个拦截器
         .addInterceptor(new Interceptor() {
@@ -56,7 +56,6 @@ public class NetWork {
           }
         })
         .build();
-
 
     Retrofit.Builder builder = new Retrofit.Builder();
 
